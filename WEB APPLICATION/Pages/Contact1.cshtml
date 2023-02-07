@@ -1,0 +1,36 @@
+﻿@page
+@model WEB_APPLICATION.Pages.Contact1Model
+@{
+    ViewData["Title"] = "Contact Page";
+}
+
+
+<h1>Contact</h1>
+
+<h2>Cotnact Form</h2>
+
+
+@if (Model.hasData)
+{
+<p>Hello @Model.FirstName @Model.Lastname</p>  
+<p> We recieved your information: </p>
+<p> @Model.Message </p>
+
+}
+
+<div class="container">
+<form method="POST">
+    <label for="fname">First Name</label><br>
+    <input type="text" id="fname" name="FirstName"><br>
+
+    <label for="lname">Last Name</label><br>
+    <input type="text" id="lname" name="LastName"><br>
+
+    <label for="message">Message</label><br>
+    <textarea id="message" name="message" style="height: 210px"></textarea><br>
+
+    <input type="submit" value="Submit" />
+
+</form>
+
+</div>
